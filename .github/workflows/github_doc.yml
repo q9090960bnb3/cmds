@@ -10,7 +10,6 @@ on:
     paths:
       - '*.md'
       - '.github/workflows/github_doc.yml'
-
 jobs:
   # Single deploy job since we're just deploying
   doc_deploy:
@@ -24,7 +23,7 @@ jobs:
 
       - uses: addnab/docker-run-action@v3
         with:
-          image: ${{github.repository}}:latest
+          image: ${{github.actor}}/gbook:latest
           options: -v ${{ github.workspace }}:/doc -w /doc
           shell: bash
           run: |
