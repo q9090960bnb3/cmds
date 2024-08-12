@@ -29,6 +29,17 @@ git push -u origin new_branch
 git tag -a {tag_name}
 # 带注释标签
 git tag -a {tag_name} -m "tag message"
+# 给指定commit 打标签
+git tag -a {tag_name} -m "tag message" {commit_id}
+```
+
+### 推送标签
+
+```sh
+# 推送单个标签
+git push origin v1.0.0
+# 推送所有标签
+git push origin --tags
 ```
 
 ### 查看标签
@@ -61,3 +72,7 @@ git push origin --delete {tag_name}
 # 删除多个
 git push origin :refs/tags/$(git tag)
 ```
+
+### 重命名标签
+
+先删除旧标签，再创建新标签
