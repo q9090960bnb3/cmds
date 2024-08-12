@@ -1,5 +1,11 @@
 # git
 
+## 克隆
+
+```sh
+
+```
+
 ## 切换分支
 
 - 切换并创建分支
@@ -12,4 +18,46 @@ git checkout -b my_branch
 
 ```sh
 git push -u origin new_branch
+```
+
+## 标签操作
+
+### 创建标签
+
+```sh
+# 轻量标签
+git tag -a {tag_name}
+# 带注释标签
+git tag -a {tag_name} -m "tag message"
+```
+
+### 查看标签
+
+```sh
+# 查看本地标签
+git tag -n
+# 查看远程标签
+git ls-remote --tags origin
+```
+
+### 删除本地标签
+
+```sh
+# 删除单个
+git tag -d {tag_name}
+# 删除多个
+git tag -d $(git tag)
+```
+
+### 删除远程标签
+
+必须先删除本地标签
+
+```sh
+# 删除单个
+git push origin :refs/tags/{tag_name}
+# 或
+git push origin --delete {tag_name}
+# 删除多个
+git push origin :refs/tags/$(git tag)
 ```
