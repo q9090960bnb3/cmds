@@ -11,3 +11,4 @@
       * [winsat](test/diskio/winsat.md)
   * [virturl](virturl/index.md)
     * [wsl](virturl/wsl/index.md)
+  * [network](network/index.md)
