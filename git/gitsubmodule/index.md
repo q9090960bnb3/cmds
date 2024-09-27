@@ -41,3 +41,26 @@ git submodule add -b {branch} {giturl} demo
 git submodule update --init --recursive
 ```
 
+## 删除子模块
+
+1. 取消对子模块的追踪：
+```sh
+git submodule deinit -f 子模块路径
+```
+
+2. 从 Git 中移除子模块：
+```sh
+git rm -f 子模块路径
+```
+
+3. 删除子模块目录：
+```sh
+rm -rf 子模块路径
+```
+
+4. 删除 .gitmodules 文件中的子模块条目： 打开 .gitmodules 文件，删除与子模块相关的条目。
+5. 删除 .git/config 文件中的子模块条目： 打开 .git/config 文件，删除与子模块相关的条目。
+6. 删除 .git/modules 目录中的子模块信息：
+```sh
+rm -rf .git/modules/子模块路径
+```
