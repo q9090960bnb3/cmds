@@ -32,7 +32,10 @@ git submodule set-branch --branch {branch} demo
 ### 添加未在工程中存在的子模块
 
 ```sh
+# 此时其会将子模块名称命名为 demo
 git submodule add -b {branch} {giturl} demo
+# eg: 最好同名，否则会触发重命名
+git submodule add https://github.com/q9090960bnb3/cmds other/common/cmds
 ```
 
 ## 拉取子模块
@@ -59,7 +62,13 @@ rm -rf 子模块路径
 ```
 
 4. 删除 .gitmodules 文件中的子模块条目： 打开 .gitmodules 文件，删除与子模块相关的条目。
+```txt
+自动删除了，不需要操作
+```
 5. 删除 .git/config 文件中的子模块条目： 打开 .git/config 文件，删除与子模块相关的条目。
+```txt
+自动删除了，不需要操作
+```
 6. 删除 .git/modules 目录中的子模块信息：
 ```sh
 rm -rf .git/modules/子模块路径
