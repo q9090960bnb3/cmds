@@ -12,3 +12,4 @@
   * [virturl](virturl/index.md)
     * [wsl](virturl/wsl/index.md)
   * [network](network/index.md)
+  * [pythontools](pythontools/index.md)

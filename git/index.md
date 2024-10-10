@@ -3,7 +3,7 @@
 ## 克隆
 
 ```sh
-
+git clone <represitory_url>
 ```
 
 ## 切换分支
