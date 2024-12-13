@@ -76,3 +76,13 @@ git push origin :refs/tags/$(git tag)
 ### 重命名标签
 
 先删除旧标签，再创建新标签
+
+## git 错误修复
+
+### object file xxx empty 修复
+
+```sh
+find .git/objects/ -type f -empty | xargs rm
+git fetch -p
+git fsck --full
+```
